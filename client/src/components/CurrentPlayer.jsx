@@ -2,7 +2,7 @@ import React from 'react';
 
 const CurrentPlayer = () => {
   return (
-    <div>
+    <div className="current-player-section">
       <h1>Pool Leaderboard</h1>
       <div className="player-info">
         <h4>PLACE</h4>
