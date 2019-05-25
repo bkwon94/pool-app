@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Winner = () => {
+const LeaderboardRow = () => {
   return (
     <div>Hello World</div>
   )
 }
 
-export default Winner;
+export default LeaderboardRow;
