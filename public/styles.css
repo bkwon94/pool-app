@@ -7,5 +7,16 @@
 
 .app-container {
   display: flex;
+  margin: auto;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  max-width: 1300px;
+  border: 1px solid black;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
