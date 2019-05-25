@@ -1,8 +1,13 @@
 import React from 'react';
+import LeaderboardRow from './LeaderboardRow.jsx';
 
 const Leaderboard = () => {
   return (
-    <div>Hello World</div>
+    <div>
+      <table>
+        <LeaderboardRow />
+      </table>
+    </div>
   )
 }
 

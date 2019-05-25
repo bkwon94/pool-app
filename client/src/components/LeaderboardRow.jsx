@@ -2,7 +2,14 @@ import React from 'react';
 
 const LeaderboardRow = () => {
   return (
-    <div>Hello World</div>
+    <div>
+      <tr>
+        <td>Place</td>
+        <td>Image</td>
+        <td>Name</td>
+        <td>Wins</td>
+      </tr>
+    </div>
   )
 }
 

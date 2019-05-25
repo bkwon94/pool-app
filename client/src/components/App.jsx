@@ -6,8 +6,7 @@ import CurrentPlayer from './CurrentPlayer.jsx';
 const App = () => {
   return (
     <div>
-      <h1>Pool Game Tracker</h1>
-      <ChooseWinner />
+      {/* <ChooseWinner /> */}
       <CurrentPlayer />
       <Leaderboard />
     </div>
