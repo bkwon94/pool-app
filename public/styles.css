@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*border and padding not added to box size*/
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+}

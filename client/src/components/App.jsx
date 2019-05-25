@@ -5,7 +5,7 @@ import CurrentPlayer from './CurrentPlayer.jsx';
 
 const App = () => {
   return (
-    <div>
+    <div className="app-container">
       {/* <ChooseWinner /> */}
       <CurrentPlayer />
       <Leaderboard />
