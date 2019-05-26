@@ -11,7 +11,8 @@ app.use(express.static(path.join(__dirname, '/../public')));
 
 app.get('/players', async(req, res) => {
   let players = await db.getPlayers();
-  res.send(players);
+  console.log('players:', players);
+  await res.send(players);
 });
 
 module.exports = app;
