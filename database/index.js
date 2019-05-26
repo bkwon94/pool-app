@@ -12,7 +12,7 @@ db.on('connected', () => {
 /* DATABASE HELPER FUNCTIONS */
 
 // INSERT NEW PLAYER
-const insertPlayer = async (newPlayer) => {
+const insertPlayer = async(newPlayer) => {
   const player = new Player(newPlayer);
   await player.save(err => {
     if (err) {
@@ -23,6 +23,22 @@ const insertPlayer = async (newPlayer) => {
   });
 };
 
+// GET PLAYERS FROM DATABASE
+const getPlayers = async() => {
+  let allPlayers;
+  await Player.find({}, (err, docs) => {
+    if (err) {
+      throw err;
+    } else {
+      allPlayers = docs;
+      console.log(allPlayers);
+    }
+  });
+  return allPlayers;
+};
+
+
 module.exports = {
-  insertPlayer: insertPlayer
+  insertPlayer: insertPlayer,
+  getPlayers: getPlayers
 }
