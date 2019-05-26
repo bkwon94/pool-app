@@ -1,13 +1,13 @@
 import React from 'react';
 
-const LeaderboardRow = () => {
+const LeaderboardRow = ({ player }) => {
   return (
     <div>
       <tr>
-        <td>Place</td>
-        <td>Image</td>
-        <td>Name</td>
-        <td>Wins</td>
+        <td>{player.place}</td>
+        <td><img src={player.image}/></td>
+        <td>{player.name}</td>
+        <td>{player.wins}</td>
       </tr>
     </div>
   )

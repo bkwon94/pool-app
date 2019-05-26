@@ -1,11 +1,15 @@
 import React from 'react';
 import LeaderboardRow from './LeaderboardRow.jsx';
 
-const Leaderboard = () => {
+const Leaderboard = ({ players }) => {
   return (
     <div>
       <table>
-        <LeaderboardRow />
+        {
+          players.map((player, index) => {
+            return <LeaderboardRow player={player} key={index}/>
+          })
+        }
       </table>
     </div>
   )

@@ -23,9 +23,8 @@ const App = () => {
   } else {
     return (
       <div className="app-container">
-        {/* <ChooseWinner /> */}
         <CurrentPlayer />
-        <Leaderboard />
+        <Leaderboard players={players}/>
       </div>
     )
   }
