@@ -12,12 +12,12 @@ const App = () => {
     fetch('/players')
       .then(res => res.json())
       .then(result => {
-        console.log(result);
         setPlayers(result);
       })
       .catch(err => console.log(err))
   }, []);
 
+  // Display loading message if the players data has not been fetched yet, otherwise display app with data fetched
   if (!players) {
     return <div>Loading...</div>
   } else {
