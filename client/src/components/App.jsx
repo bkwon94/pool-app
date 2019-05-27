@@ -7,10 +7,11 @@ import CurrentPlayer from './CurrentPlayer.jsx';
 const App = () => {
 
   const [players, setPlayers] = useState(null);
-  const [currentPlayerName, setName] = useState(null);
-  const [currentPlayerPlace, setPlace] = useState(null);
-  const [currentPlayerImage, setImage] = useState(null);
-  const [currentPlayerWins, setWins] = useState(null);
+  const [current, setCurrent] = useState(null);
+  // const [currentPlayerName, setName] = useState(null);
+  // const [currentPlayerPlace, setPlace] = useState(null);
+  // const [currentPlayerImage, setImage] = useState(null);
+  // const [currentPlayerWins, setWins] = useState(null);
   // Fetch the sample data stored in database on component mount
   useEffect(() => {
     fetch('/players')
@@ -23,10 +24,16 @@ const App = () => {
 
   // When player is clicked, set current player info accordingly
   const handlePlayerChange = (player) => {
-    setName(player.name);
-    setPlace(player.place)
-    setImage(player.image);
-    setWins(player.wins);
+
+      let newCurrentPlayer = {
+        name: player.name,
+        place: player.place,
+        image: player.image,
+        wins: player.wins
+      }
+
+      setCurrent(newCurrentPlayer);
+
   }
 
   // Display loading message if the players data has not been fetched yet, otherwise display app with data fetched
@@ -35,7 +42,7 @@ const App = () => {
   } else {
     return (
       <div className="app-container">
-        <CurrentPlayer />
+        <CurrentPlayer current={current}/>
         <Leaderboard players={players} playerClick={handlePlayerChange}/>
       </div>
     )
