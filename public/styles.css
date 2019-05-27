@@ -50,5 +50,26 @@
 }
 
 .leaderboard-row {
-  border: 1px solid black;
+  display: inherit;
+  /* border: 1px solid black; */
+  /* justify-content: space-between; */
+}
+
+tr:hover {
+  background-color: rgba(119, 136, 153, 0.2);
+}
+#td-place {
+  width: 15%;
+}
+
+#td-image {
+  width: 15%;
+}
+
+#td-name {
+  width: 50%;
+}
+
+#td-wins {
+  width: 30%;
 }
