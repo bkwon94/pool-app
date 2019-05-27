@@ -1,9 +1,9 @@
 import React from 'react';
 
-const LeaderboardRow = ({ player }) => {
+const LeaderboardRow = ({ player, playerClick }) => {
   return (
-    <tr className="leaderboard-row">
-      
+    <tr className="leaderboard-row" onClick={playerClick}>
+
       <td id="td-place">{player.place}</td>
       <td id="td-image"><img src={player.image}/></td>
       <td id="td-name">{player.name}</td>
