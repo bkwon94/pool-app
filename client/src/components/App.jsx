@@ -8,10 +8,7 @@ const App = () => {
 
   const [players, setPlayers] = useState(null);
   const [current, setCurrent] = useState(null);
-  // const [currentPlayerName, setName] = useState(null);
-  // const [currentPlayerPlace, setPlace] = useState(null);
-  // const [currentPlayerImage, setImage] = useState(null);
-  // const [currentPlayerWins, setWins] = useState(null);
+
   // Fetch the sample data stored in database on component mount
   useEffect(() => {
     fetch('/players')
@@ -31,7 +28,7 @@ const App = () => {
         image: player.image,
         wins: player.wins
       }
-
+      console.log(newCurrentPlayer);
       setCurrent(newCurrentPlayer);
 
   }
