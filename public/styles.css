@@ -40,3 +40,15 @@
   flex-direction: row;
   justify-content: space-around;
 }
+
+/*  LEADERBOARD STYLING */
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.leaderboard-row {
+  border: 1px solid black;
+}
