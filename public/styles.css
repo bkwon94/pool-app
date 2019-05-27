@@ -51,19 +51,29 @@
 
 .leaderboard-row {
   display: inherit;
+  align-items: center;
+  margin-top: 5px;
   /* border: 1px solid black; */
   /* justify-content: space-between; */
 }
 
 tr:hover {
   background-color: rgba(119, 136, 153, 0.2);
+  transition: 0.5s;
 }
+
 #td-place {
   width: 15%;
 }
 
 #td-image {
   width: 15%;
+}
+
+#td-image img {
+  border-radius: 50%;
+  height: 10vh;
+  /* border: 1px solid black; */
 }
 
 #td-name {
