@@ -29,6 +29,7 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .current-player-section h1 {
@@ -88,12 +89,13 @@ tr:hover {
 
 #td-image {
   width: 15%;
+
 }
 
 #td-image img {
   border-radius: 50%;
+  /* border: 4px solid rgb(43, 107, 175); */
   height: 10vh;
-  /* border: 1px solid black; */
 }
 
 #td-name {

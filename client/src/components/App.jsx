@@ -40,6 +40,7 @@ const App = () => {
     return (
       <div className="app-container">
         <CurrentPlayer current={current}/>
+        <ChooseWinner />
         <Leaderboard players={players} playerClick={handlePlayerChange}/>
       </div>
     )
