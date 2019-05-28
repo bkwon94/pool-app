@@ -121,6 +121,7 @@ tr:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 5px;
 }
 
 .options-button {
@@ -169,5 +170,35 @@ tr:hover {
   color: #FFF;
   border-radius: 50px;
   width: 75px;
+  cursor: pointer;
+}
+
+/* DROPDOWN STYLING */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-container select {
+  background: transparent;
+  border: none;
+  height: 30px;
+  padding: 5px;
+  background-color: #FFF;
+  color: #000;
+  border: 1px solid #B02E0C;
+}
+
+.dropdown-container select:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dropdown-container p {
+  text-align: center;
+}
+
+.winner-icon {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #DAA520;
   cursor: pointer;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const ChooseOption = ({ setPlayerAdded, playerAdded }) => {
+const ChooseOption = ({ setPlayerAdded, playerAdded, players }) => {
 
   const [newGame, setNewGame] = useState(false);
   const [addPlayer, setAddPlayer] = useState(false);
@@ -37,22 +37,38 @@ const ChooseOption = ({ setPlayerAdded, playerAdded }) => {
         <div className="options-button" onClick={() => setAddPlayer(true)}>Add Player</div>
       </div>
     )
-  } else if (newGame && !addPlayer) {
+  } else if (newGame && !addPlayer && players) {
     return (
       <div className="options">
-        <ul>
-          <li>yo</li>
-        </ul>
-        <ul>
-          <li>yo</li>
-        </ul>
+        <div className="back-button" onClick={handleBackClick}>
+          <i className="fas fa-arrow-left"></i>
+        </div>
+        <div className="dropdown-container">
+          <select>
+            {
+              players.map((player, index) => {
+                return <option key={index}>{player.name}</option>
+              })
+            }
+          </select>
+          <i className="fas fa-trophy winner-icon"></i>
+
+          <select>
+            {
+              players.map((player, index) => {
+                return <option key={index}>{player.name}</option>
+              })
+            }
+          </select>
+          <i className="fas fa-trophy winner-icon"></i>
+        </div>
       </div>
     )
   } else {
     return (
       <div className="options">
         <div className="back-button" onClick={handleBackClick}>
-        <i className="fas fa-arrow-left"></i>
+          <i className="fas fa-arrow-left"></i>
         </div>
         <form onSubmit={handleSubmit} className="name-input">
           <input type="text" value={name} onChange={event => setName(event.target.value)} placeholder="Enter name..."/>

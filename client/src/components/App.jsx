@@ -41,7 +41,7 @@ const App = () => {
     return (
       <div className="app-container">
         <CurrentPlayer current={current} defaultPlayer={players[0]}/>
-        <ChooseOption setPlayerAdded={setPlayerAdded} playerAdded={playerAdded}/>
+        <ChooseOption setPlayerAdded={setPlayerAdded} playerAdded={playerAdded} players={players}/>
         <Leaderboard players={players} playerClick={handlePlayerChange}/>
       </div>
     )
