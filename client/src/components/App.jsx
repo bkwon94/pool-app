@@ -40,7 +40,7 @@ const App = () => {
   } else {
     return (
       <div className="app-container">
-        <CurrentPlayer current={current} defaultPlayer={players[0]}/>
+        <CurrentPlayer current={current} players={players}/>
         <ChooseOption setPlayerAdded={setPlayerAdded} playerAdded={playerAdded} players={players}/>
         <Leaderboard players={players} playerClick={handlePlayerChange}/>
       </div>

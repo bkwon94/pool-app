@@ -1,7 +1,7 @@
 import React from 'react';
 import ChooseOption from './ChooseOption.jsx';
 
-const CurrentPlayer = ({ current, defaultPlayer }) => {
+const CurrentPlayer = ({ current, players }) => {
 
   // Display proper suffix based on place
   // 1st, 2nd, 3rd, 4th, 5th ..... etc
@@ -20,6 +20,12 @@ const CurrentPlayer = ({ current, defaultPlayer }) => {
     }
     return suffix;
   }
+  // If no player selected, display top player with most wins
+  const findTopPlayer = (players) => {
+    let sortedOrder = players.sort((a, b) => b.wins - a.wins);
+    let topPlayer = sortedOrder[0];
+    return topPlayer;
+  }
 
   if (!current) {
     return (
@@ -28,17 +34,16 @@ const CurrentPlayer = ({ current, defaultPlayer }) => {
         <div className="player-info">
           <p>
             <span className="player-info-bold">
-              {`${defaultPlayer.place}`}
-            </span>{`${createSuffix(defaultPlayer.place)}`}
+              1
+            </span>{`${createSuffix(1)}`}
           </p>
-          <img src={defaultPlayer.image} alt="player image"/>
+          <img src={findTopPlayer(players).image} alt="player image"/>
           <p>
             <span className="player-info-bold">
-              {defaultPlayer.wins}
+              {findTopPlayer(players).wins}
             </span> w's
           </p>
         </div>
-
       </div>
     )
   } else {
@@ -58,7 +63,6 @@ const CurrentPlayer = ({ current, defaultPlayer }) => {
             </span> w's
           </p>
         </div>
-
       </div>
     )
   }
