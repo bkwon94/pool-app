@@ -31,4 +31,4 @@ http://localhost:2000
 ```
 
 ### Demo
-![leaderboard-demo](demo/demo1.gif)
+![leaderboard-demo](demo/demo.gif)
