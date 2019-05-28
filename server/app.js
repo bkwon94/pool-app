@@ -18,7 +18,14 @@ app.post('/players', async(req, res) => {
   console.log(req.body);
   let player = req.body;
   db.insertPlayer(player);
-  await res.send('Done');
+  await res.send('Player added');
+});
+
+app.put('/players', async(req, res) => {
+  console.log(req.body);
+  let playerName = req.body.name;
+  db.updateWins(playerName);
+  await res.send('Updated wins');
 });
 
 module.exports = app;

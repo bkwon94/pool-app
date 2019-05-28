@@ -23,6 +23,15 @@ const insertPlayer = async(newPlayer) => {
   });
 };
 
+// UPDATE WINS FOR PLAYERS
+const updateWins = async(name) => {
+  let query = {$inc: { "wins": 0.5 }};
+  await Player.updateOne({ name: name }, query, (err, doc) => {
+    if (err) { throw err; }
+    console.log(doc);
+  });
+}
+
 // GET PLAYERS FROM DATABASE
 const getPlayers = async() => {
   let allPlayers;
@@ -40,5 +49,6 @@ const getPlayers = async() => {
 
 module.exports = {
   insertPlayer: insertPlayer,
-  getPlayers: getPlayers
+  getPlayers: getPlayers,
+  updateWins: updateWins
 }

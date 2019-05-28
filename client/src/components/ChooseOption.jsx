@@ -6,6 +6,8 @@ const ChooseOption = ({ setPlayerAdded, playerAdded, players }) => {
   const [newGame, setNewGame] = useState(false);
   const [addPlayer, setAddPlayer] = useState(false);
   const [name, setName] = useState('');
+  const [player1, setPlayer1] = useState('');
+  const [player2, setPlayer2] = useState('');
 
   // On form submit, send data to server -> database
   // Give default avatar for now
@@ -29,6 +31,29 @@ const ChooseOption = ({ setPlayerAdded, playerAdded, players }) => {
     setNewGame(false);
     setAddPlayer(false);
   }
+  // Handle change when user selects from dropdown for PLAYER 1
+  const handleSelectChangeP1 = (event) => {
+    console.log(event.target.value);
+    setPlayer1(event.target.value);
+  }
+  // Handle change for PLAYER 2
+  const handleSelectChangeP2 = (event) => {
+    console.log(event.target.value);
+    setPlayer2(event.target.value);
+  }
+  // If winner is selected, send the name to server in order to update records
+  const handleWinner = (player) => {
+    fetch('/players', {
+      method: 'PUT',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        name: player
+      })
+    })
+      .then(() => {
+        setPlayerAdded(!playerAdded);
+      })
+  }
 
   if (!newGame && !addPlayer) {
     return (
@@ -44,23 +69,23 @@ const ChooseOption = ({ setPlayerAdded, playerAdded, players }) => {
           <i className="fas fa-arrow-left"></i>
         </div>
         <div className="dropdown-container">
-          <select>
+          <select value={player1} onChange={handleSelectChangeP1}>
             {
               players.map((player, index) => {
                 return <option key={index}>{player.name}</option>
               })
             }
           </select>
-          <i className="fas fa-trophy winner-icon"></i>
+          <i className="fas fa-trophy winner-icon" onClick={() => handleWinner(player1)}></i>
 
-          <select>
+          <select value={player2} onChange={handleSelectChangeP2}>
             {
               players.map((player, index) => {
                 return <option key={index}>{player.name}</option>
               })
             }
           </select>
-          <i className="fas fa-trophy winner-icon"></i>
+          <i className="fas fa-trophy winner-icon" onClick={() => handleWinner(player2)}></i>
         </div>
       </div>
     )
