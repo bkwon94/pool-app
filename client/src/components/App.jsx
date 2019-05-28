@@ -20,11 +20,11 @@ const App = () => {
   }, []);
 
   // When player is clicked, set current player info accordingly
-  const handlePlayerChange = (player) => {
+  const handlePlayerChange = (player, place) => {
 
       let newCurrentPlayer = {
         name: player.name,
-        place: player.place,
+        place: place,
         image: player.image,
         wins: player.wins
       }
