@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import ChooseWinner from './ChooseWinner.jsx';
+import ChooseOption from './ChooseOption.jsx';
 import Leaderboard from './Leaderboard.jsx';
 import CurrentPlayer from './CurrentPlayer.jsx';
 
@@ -40,7 +40,7 @@ const App = () => {
     return (
       <div className="app-container">
         <CurrentPlayer current={current}/>
-        <ChooseWinner />
+        <ChooseOption />
         <Leaderboard players={players} playerClick={handlePlayerChange}/>
       </div>
     )
