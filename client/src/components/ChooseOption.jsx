@@ -52,11 +52,11 @@ const ChooseOption = ({ setPlayerAdded, playerAdded }) => {
     return (
       <div className="options">
         <div className="back-button" onClick={handleBackClick}>
-          <i className="fas fa-hand-point-left"></i>
+        <i className="fas fa-arrow-left"></i>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="name-input">
           <input type="text" value={name} onChange={event => setName(event.target.value)} placeholder="Enter name..."/>
-          <input type="submit" value="Create"/>
+          <input id="submit-button" type="submit" value="Create"/>
         </form>
       </div>
     )

@@ -150,4 +150,24 @@ tr:hover {
 
 .back-button {
   margin-right: 5px;
+  cursor: pointer;
+  width: 20px;
+  background: #B02E0C;
+  border-radius: 50%;
+  color: #FFF;
+  padding-left: 3px;
+}
+
+.name-input input{
+  height: 25px;
+}
+
+#submit-button {
+  /* font-size: 50px; */
+  margin-left: 2px;
+  background: #B02E0C;
+  color: #FFF;
+  border-radius: 50px;
+  width: 75px;
+  cursor: pointer;
 }
