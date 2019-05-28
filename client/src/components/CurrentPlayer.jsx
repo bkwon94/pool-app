@@ -22,7 +22,7 @@ const CurrentPlayer = ({ current, defaultPlayer }) => {
   if (!current) {
     return (
       <div className="current-player-section">
-        <h1>O<sub>3</sub> World Pool Leaderboard</h1>
+        <p>O<sub>3</sub> World Pool Leaderboard</p>
         <div className="player-info">
           <p>
             <span className="player-info-bold">
@@ -42,7 +42,7 @@ const CurrentPlayer = ({ current, defaultPlayer }) => {
   } else {
     return (
       <div className="current-player-section">
-        <h1>O<sub>3</sub> World Pool Leaderboard</h1>
+        <p>O<sub>3</sub> World Pool Leaderboard</p>
         <div className="player-info">
           <p>
             <span className="player-info-bold">

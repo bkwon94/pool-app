@@ -33,9 +33,11 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.current-player-section h1 {
+.current-player-section p {
+  font-size: 25px;
   text-align: center;
-  margin-bottom: 5px;
+  margin-top: 7.5px;
+  margin-bottom: 12px;
 }
 
 .player-info {
