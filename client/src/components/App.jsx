@@ -8,6 +8,7 @@ const App = () => {
 
   const [players, setPlayers] = useState(null);
   const [current, setCurrent] = useState(null);
+  const [playerAdded, setPlayerAdded] = useState(false);
 
   // Fetch the sample data stored in database on component mount
   useEffect(() => {
@@ -17,7 +18,9 @@ const App = () => {
         setPlayers(result);
       })
       .catch(err => console.log(err))
-  }, []);
+  }, [playerAdded]);
+  // If a player is created, fetch players again and re render to include new player
+
 
   // When player is clicked, set current player info accordingly
   const handlePlayerChange = (player, place) => {
@@ -38,7 +41,7 @@ const App = () => {
     return (
       <div className="app-container">
         <CurrentPlayer current={current} defaultPlayer={players[0]}/>
-        <ChooseOption />
+        <ChooseOption setPlayerAdded={setPlayerAdded} playerAdded={playerAdded}/>
         <Leaderboard players={players} playerClick={handlePlayerChange}/>
       </div>
     )

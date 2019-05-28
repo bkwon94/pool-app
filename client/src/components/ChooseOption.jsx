@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const ChooseOption = () => {
+const ChooseOption = ({ setPlayerAdded, playerAdded }) => {
 
   const [newGame, setNewGame] = useState(false);
   const [addPlayer, setAddPlayer] = useState(false);
@@ -17,7 +17,10 @@ const ChooseOption = () => {
         image: 'https://s3.amazonaws.com/uifaces/faces/twitter/haligaliharun/128.jpg',
         wins: 0
       })
-    });
+    })
+      .then(() => {
+        setPlayerAdded(!playerAdded);
+      })
   }
 
   if (!newGame && !addPlayer) {
