@@ -105,6 +105,9 @@ tr:hover {
 #td-name {
   width: 50%;
   font-size: 18px;
+  overflow: hidden;
+  margin-left: 16px;
+  /* text-align: center; */
 }
 
 #td-wins {
@@ -122,6 +125,7 @@ tr:hover {
   justify-content: center;
   align-items: center;
   margin-top: 5px;
+  min-width: 400px;
 }
 
 .options-button {
@@ -140,7 +144,6 @@ tr:hover {
   right: 0;
   background: #B02E0C;
   transition: width .2s ease;
-  -webkit-transition: width .2s ease;
 }
 
 .options-button:hover:after {
