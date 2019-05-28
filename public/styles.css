@@ -114,7 +114,7 @@ tr:hover {
 }
 
 /* CHOOSE OPTION STYLING */
-#options {
+.options {
   display: inherit;
   width: 50%;
   height: 80px;
