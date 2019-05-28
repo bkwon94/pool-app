@@ -33,7 +33,7 @@ const CurrentPlayer = ({ current, defaultPlayer }) => {
           <p>
             <span className="player-info-bold">
               {defaultPlayer.wins}
-            </span> wins
+            </span> w's
           </p>
         </div>
 
@@ -53,7 +53,7 @@ const CurrentPlayer = ({ current, defaultPlayer }) => {
           <p>
             <span className="player-info-bold">
               {current.wins}
-            </span> wins
+            </span> w's
           </p>
         </div>
 

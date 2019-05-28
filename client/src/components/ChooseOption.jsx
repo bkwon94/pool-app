@@ -7,6 +7,8 @@ const ChooseOption = ({ setPlayerAdded, playerAdded }) => {
   const [addPlayer, setAddPlayer] = useState(false);
   const [name, setName] = useState('');
 
+  // On form submit, send data to server -> database
+  // Give default avatar for now
   const handleSubmit = (event) => {
     event.preventDefault();
     fetch('/players', {
@@ -21,6 +23,11 @@ const ChooseOption = ({ setPlayerAdded, playerAdded }) => {
       .then(() => {
         setPlayerAdded(!playerAdded);
       })
+  }
+  // On a back click, set state accordingly to render the default display of buttons
+  const handleBackClick = () => {
+    setNewGame(false);
+    setAddPlayer(false);
   }
 
   if (!newGame && !addPlayer) {
@@ -44,6 +51,9 @@ const ChooseOption = ({ setPlayerAdded, playerAdded }) => {
   } else {
     return (
       <div className="options">
+        <div className="back-button" onClick={handleBackClick}>
+          <i className="fas fa-hand-point-left"></i>
+        </div>
         <form onSubmit={handleSubmit}>
           <input type="text" value={name} onChange={event => setName(event.target.value)} placeholder="Enter name..."/>
           <input type="submit" value="Create"/>
