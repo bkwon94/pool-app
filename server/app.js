@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/../public')));
 
+
 app.get('/players', async(req, res) => {
   let players = await db.getPlayers();
   await res.send(players);

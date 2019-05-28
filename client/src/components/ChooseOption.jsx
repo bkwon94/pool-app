@@ -24,7 +24,7 @@ const ChooseOption = ({ setPlayerAdded, playerAdded, players }) => {
     })
       .then(() => {
         setPlayerAdded(!playerAdded);
-      })
+      });
   }
   // On a back click, set state accordingly to render the default display of buttons
   const handleBackClick = () => {
@@ -42,6 +42,7 @@ const ChooseOption = ({ setPlayerAdded, playerAdded, players }) => {
     setPlayer2(event.target.value);
   }
   // If winner is selected, send the name to server in order to update records
+  // Simulate player added so data is re-fetched and causes render
   const handleWinner = (player) => {
     fetch('/players', {
       method: 'PUT',
@@ -55,6 +56,7 @@ const ChooseOption = ({ setPlayerAdded, playerAdded, players }) => {
       })
   }
 
+  // Case when neither new game nor add player has been clicked
   if (!newGame && !addPlayer) {
     return (
       <div className="options">
@@ -62,7 +64,7 @@ const ChooseOption = ({ setPlayerAdded, playerAdded, players }) => {
         <div className="options-button" onClick={() => setAddPlayer(true)}>Add Player</div>
       </div>
     )
-  } else if (newGame && !addPlayer && players) {
+  } else if (newGame && !addPlayer && players) { //New game screen
     return (
       <div className="options">
         <div className="back-button" onClick={handleBackClick}>

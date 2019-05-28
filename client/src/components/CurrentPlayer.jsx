@@ -1,5 +1,4 @@
 import React from 'react';
-import ChooseOption from './ChooseOption.jsx';
 
 const CurrentPlayer = ({ current, players }) => {
 
@@ -26,7 +25,7 @@ const CurrentPlayer = ({ current, players }) => {
     let topPlayer = sortedOrder[0];
     return topPlayer;
   }
-
+  
   if (!current) {
     return (
       <div className="current-player-section">

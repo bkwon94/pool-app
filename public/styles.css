@@ -98,7 +98,6 @@ tr:hover {
 
 #td-image img {
   border-radius: 50%;
-  /* border: 4px solid rgb(43, 107, 175); */
   height: 10vh;
 }
 
@@ -106,8 +105,7 @@ tr:hover {
   width: 50%;
   font-size: 18px;
   overflow: hidden;
-  margin-left: 16px;
-  /* text-align: center; */
+  margin-left: 20px;
 }
 
 #td-wins {
