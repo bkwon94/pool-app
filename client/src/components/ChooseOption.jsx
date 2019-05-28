@@ -1,10 +1,11 @@
 import React from 'react';
 
-const ChooseOption = () => {
+const ChooseOption = ({ winnerClick }) => {
   return (
     <div id="options">
-      <div className="options-button">Head to Head</div>
-      <div className="options-button">Player Info</div>
+      <div className="options-button">New Game</div>
+      <div className="options-button">Add Player</div>
+      <div className="options-button">Delete Player</div>
     </div>
   )
 }

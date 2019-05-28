@@ -21,7 +21,6 @@ const App = () => {
 
   // When player is clicked, set current player info accordingly
   const handlePlayerChange = (player, place) => {
-
       let newCurrentPlayer = {
         name: player.name,
         place: place,
@@ -30,7 +29,6 @@ const App = () => {
       }
       console.log(newCurrentPlayer);
       setCurrent(newCurrentPlayer);
-
   }
 
   // Display loading message if the players data has not been fetched yet, otherwise display app with data fetched
@@ -39,7 +37,7 @@ const App = () => {
   } else {
     return (
       <div className="app-container">
-        <CurrentPlayer current={current}/>
+        <CurrentPlayer current={current} defaultPlayer={players[0]}/>
         <ChooseOption />
         <Leaderboard players={players} playerClick={handlePlayerChange}/>
       </div>

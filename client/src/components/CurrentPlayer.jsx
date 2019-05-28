@@ -1,6 +1,7 @@
 import React from 'react';
+import ChooseOption from './ChooseOption.jsx';
 
-const CurrentPlayer = ({ current }) => {
+const CurrentPlayer = ({ current, defaultPlayer }) => {
 
   // Display proper suffix based on place
   // 1st, 2nd, 3rd, 4th, 5th ..... etc
@@ -23,10 +24,19 @@ const CurrentPlayer = ({ current }) => {
       <div className="current-player-section">
         <h1>O<sub>3</sub> World Pool Leaderboard</h1>
         <div className="player-info">
-          <h4>place</h4>
-          <h4>IMAGE</h4>
-          <h4>WINS</h4>
+          <p>
+            <span className="player-info-bold">
+              {`${defaultPlayer.place}`}
+            </span>{`${createSuffix(defaultPlayer.place)}`}
+          </p>
+          <img src={defaultPlayer.image} alt="player image"/>
+          <p>
+            <span className="player-info-bold">
+              {defaultPlayer.wins}
+            </span> wins
+          </p>
         </div>
+
       </div>
     )
   } else {
@@ -46,6 +56,7 @@ const CurrentPlayer = ({ current }) => {
             </span> wins
           </p>
         </div>
+
       </div>
     )
   }
