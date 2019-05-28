@@ -21,7 +21,7 @@
 
 /* CURRENT PLAYER STYLING */
 .current-player-section {
-  background-image:linear-gradient(to right, rgb(91, 179, 247), rgb(43, 107, 175));
+  background-image:linear-gradient(to right, #B02E0C, #EB4511);
   color: #FFF;
   height: 200px;
   width: 100%;
@@ -46,6 +46,7 @@
 
 .player-info img {
   border-radius: 50%;
+  border: 3px solid #FFF;
   height: 100px;
 }
 
@@ -118,12 +119,29 @@ tr:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  border-radius: 50px;
 }
 
 .options-button {
-  /* margin-right: 5px; */
-  border: 1px solid black;
   cursor: pointer;
+  margin-right: 7.5px;
+  position: relative;
+}
+
+.options-button:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #B02E0C;
+  transition: width .2s ease;
+  -webkit-transition: width .2s ease;
+}
+
+.options-button:hover:after {
+  width: 100%;
+  left: 0;
+  background: #B02E0C;
 }
