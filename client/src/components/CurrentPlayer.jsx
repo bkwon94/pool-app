@@ -8,11 +8,11 @@ const CurrentPlayer = ({ current, players }) => {
     let suffix = '';
     let placeAsString = place.toString();
     let lastChar = placeAsString[placeAsString.length - 1];
-    if (Number(lastChar) === 1) {
+    if (Number(lastChar) === 1 && place !== 11) {
       suffix = 'st';
-    } else if (Number(lastChar) === 2) {
+    } else if (Number(lastChar) === 2 && place !== 12) {
       suffix = 'nd';
-    } else if (Number(lastChar) === 3) {
+    } else if (Number(lastChar) === 3 && place !== 13) {
       suffix = 'rd';
     } else {
       suffix = 'th';
@@ -25,7 +25,7 @@ const CurrentPlayer = ({ current, players }) => {
     let topPlayer = sortedOrder[0];
     return topPlayer;
   }
-  
+
   if (!current) {
     return (
       <div className="current-player-section">
