@@ -7,11 +7,13 @@ const CurrentPlayer = ({ current, defaultPlayer }) => {
   // 1st, 2nd, 3rd, 4th, 5th ..... etc
   const createSuffix = (place) => {
     let suffix = '';
-    if (place === 1) {
+    let placeAsString = place.toString();
+    let lastChar = placeAsString[placeAsString.length - 1];
+    if (Number(lastChar) === 1) {
       suffix = 'st';
-    } else if (place === 2) {
+    } else if (Number(lastChar) === 2) {
       suffix = 'nd';
-    } else if (place === 3) {
+    } else if (Number(lastChar) === 3) {
       suffix = 'rd';
     } else {
       suffix = 'th';
