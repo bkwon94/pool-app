@@ -205,3 +205,47 @@ tr:hover {
   color: #DAA520;
   cursor: pointer;
 }
+
+/* WHEN SCREEN SIZE IS 450 OR LOWER */
+@media only screen and (max-width: 450px) {
+  #td-place {
+    width: 10%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  #td-image {
+    width: 10%;
+    margin-right: 5px;
+
+  }
+
+  #td-image img {
+    border-radius: 50%;
+    height: 10vh;
+  }
+
+  #td-name {
+    display: none;
+  }
+
+  #td-wins {
+    width: 20%;
+    text-align: center;
+    font-size: 26px;
+    margin-left: auto;
+  }
+
+  .dropdown-container select {
+    background: transparent;
+    border: none;
+    height: 20px;
+    width: 65px;
+    padding: 5px;
+    background-color: #FFF;
+    color: #000;
+    border: 1px solid #B02E0C;
+  }
+
+}
