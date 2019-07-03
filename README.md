@@ -1,5 +1,5 @@
-# Pool Leaderboard
-Pool Leaderboard is a full stack application that can keep track of top winners(like a leaderboard).
+# Leaderboard
+Leaderboard is a full stack application that can keep track of top winners.
 
 ## Development
 From within the root directory:
