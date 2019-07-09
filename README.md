@@ -1,5 +1,5 @@
-# Leaderboard
-Leaderboard is a full stack application that can keep track of top winners.
+# ScoreTracker
+ScoreTracker is a full stack application that can keep track of top winners.
 
 ## Development
 From within the root directory:
